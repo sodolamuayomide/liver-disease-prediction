@@ -93,3 +93,23 @@ liver_patient_project/
 - Simpler models can outperform complex ones on small datasets
 - Threshold tuning is a powerful and underused technique
 - Feature distributions matter — log transformation improved model consistency
+
+
+## ⚠️ Limitations
+- Small dataset (583 patients) from one geographic region — 
+  may not generalise globally
+- Dataset uses non-standard units — app inputs must match 
+  training data units, not clinical reference ranges
+- SHAP analysis revealed albumin's directional influence 
+  contradicts clinical literature — likely due to class 
+  imbalance and dataset size
+- Model is a screening tool only — not a diagnostic instrument
+
+
+## 🔭 Future Work
+- Collect larger, more balanced dataset with standardised units
+- Explore temporal modeling — tracking patient markers over 
+  time rather than single snapshots
+- Integrate ICU data for critical care prediction
+- Validate model against clinical expert judgment
+- Explore deep learning approaches with larger datasets
